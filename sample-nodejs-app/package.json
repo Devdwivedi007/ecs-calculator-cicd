@@ -1,14 +1,13 @@
 {
-  "name": "simple-calculator",
+  "name": "ecs-calculator",
   "version": "1.0.0",
-  "description": "Demo web app running on Amazon ECS pulling images from ECR",
-  "main": "calculator.js",
+  "description": "Calculator application deployed on AWS ECS Fargate",
+  "main": "app.js",
   "scripts": {
-    "start": "node calculator.js"
+    "start": "node app.js"
   },
-  "author": "buraku",
-  "license": "MIT-0",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.21.2",
+    "body-parser": "^1.20.3"
   }
 }

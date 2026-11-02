@@ -1,7 +1,13 @@
-FROM public.ecr.aws/bitnami/node:16.18.1
-RUN mkdir -p /usr/src/calc
-WORKDIR /usr/src/calc
+FROM node:22-bookworm-slim
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install --omit=dev
+
 COPY . .
-RUN npm install
-# EXPOSE 3000
-CMD [ "node", "app.js" ]
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
