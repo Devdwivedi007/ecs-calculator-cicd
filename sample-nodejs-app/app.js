@@ -5,9 +5,10 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    status: "healthy"
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'healthy',
+    version: '2.0'
   });
 });
 
